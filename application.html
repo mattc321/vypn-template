@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet prefetch">
+    <title>VYPN High Risk Processing</title>
+</head>
+<body class="vypn-body">
+<div class="outer-cont height100">
+    <div class="top-cont">
+        <a class="fixed-top heading" href="#">VYPN</a>
+        <div class="height100 flexy sticky-col-left">
+            <div class="flexy animated bounceIn">
+                <div class="center-cont">
+                    <h1 class="slogan">Your invite code was valid. Sweet!</h1>
+                    <span class="subtitle">No you just need to fill out the form, and you'll be all set.</span>
+                </div>
+            </div>
+        </div>
+        <div class="height100 sticky-col-right white-bg text-center">
+            <div class="flexy center-cont height100 animated bounceIn">
+                <form name="formy" id="formy" action="complete.html" onsubmit="" class="form-wrapper" method="post">
+
+                    <fieldset id="first" class="section is-active">
+                        <div class="section-header">
+                            <h2>Application</h2>
+                            <h4>Submissions that include all of the requested information will be expedited.</h4>
+                        </div>
+                        <input id="name" name="fullname" placeholder="Full Name" type="text">
+                        <input id="email" name="email" placeholder="Email" type="text">
+                        <input id="business" name="business" placeholder="Business Name" type="text">
+                        <input id="website" name="website" placeholder="Website" type="text">
+                        <div id="next_btn1" class="button" onclick="validate_step1();">Next</div>
+                        <div id="tellem" class="inputkind incorrect"></div>
+                    </fieldset>
+
+                    <fieldset id="second" class="section hide-field">
+                        <div class="padding-40 mobile-padding">
+                            <h2>Business Info</h2>
+                            <h4>What kind of products do you sell? Select all that apply to your business.</h4>
+                        </div>
+                        <div class="row cf">
+                            <div class="check-cont four col">
+                                <input class="" id="r1" name="r1" type="checkbox"> <label for="r1"><span class="accs">CBD Oil</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r2" name="r1" type="checkbox"> <label for="r2"><span class="accs">Peptides</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r3" name="r1" type="checkbox"> <label for="r3"><span class="accs">Gaming</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r4" name="r1" type="checkbox"> <label for="r4"><span class="accs">Kratom</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r5" name="r1" type="checkbox"> <label for="r5"><span class="accs">Nutra</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r6" name="r1" type="checkbox"> <label for="r6"><span class="accs">Tobacco</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r7" name="r1" type="checkbox"> <label for="r7"><span class="accs">Travel</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r8" name="r1" type="checkbox"> <label for="r8"><span class="accs">Hemp</span></label>
+                            </div>
+                            <div class="check-cont four col">
+                                <input class="" id="r9" name="r1" type="checkbox"> <label for="r9"><span class="accs">Other</span></label>
+                            </div>
+                        </div>
+                        <div class="back" id="back_btn1" >Back</div>
+                        <div class="button" id="next_btn2">Next</div>
+                    </fieldset>
+
+                    <fieldset id="third" class="section hide-field">
+                        <div class="padding-40 mobile-padding">
+                            <h2>Financial</h2>
+                            <h4>Next! We need to know what your volume of sales looks like!</h4>
+                        </div>
+                        <input id="volume" name="volume" placeholder="Monthly Volume" type="text">
+                        <input id="vtbp" name="vtbp" placeholder="Volume To Be Processed" type="text">
+                        <div id="back_btn2" class="back">Back</div>
+                        <input id="next_btn3" class="subby" type="submit" value="Submit" onclick="return validate_step3()">
+                        <div id="tellem2" class="inputkind incorrect"></div>
+                    </fieldset>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<div id="bottom"></div>
+</html>
