@@ -2,17 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="js/all.min.js"></script>
+    <!--<script src="js/all.min.js"></script>-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet prefetch">
-    <title>VYPN High Risk Processing</title>
+    <title>vyth Shake That Booty</title>
 </head>
 <body class="dashboard-body">
 <div class="outer-cont height100">
-    <div class="top-cont">
-        <a class="fixed-top heading" href="#">VYPN</a>
+    <div class="col-left-75 height100 flexy">
+        <div class="top-menu-cont">
+            <a class="fixed-top heading-black" href="#">vyth</a>
+            <div class="hamburger">
+                Hamburger
+            </div>
+        </div>
+    </div>
+    <div class="col-right-35 height100 flexy">
+        <div class="right-menu-cont">
+            <div class="center-menu">
+                <div id="signin" class="right-menu-item wb-btn hover">
+                    Sign In
+                </div>
+                <div id="pro" class="right-menu-item wb-btn hover">
+                    PRO
+                </div>
+            </div>
+        </div>
+        <div class="flexy text-center">
+            <div class="text-center">
+                <form class="login-form" id="login" action="application.html" method="post">
+                    <h4 class="form-title">Sign In</h4>
+                    <input id="email" name="email" type="text" placeholder="Email">
+                    <input id="password" name="password" type="text" placeholder="Password">
+                    <input class="btn" type="submit" value="SUBMIT">
+                </form>
+            </div>
+            <div class="google-signin">
+                <div class="g-signin2" data-onsuccess="onSignIn"><img src="http://3.bp.blogspot.com/-Ep_sMHCGb-M/Vl9h5smpeaI/AAAAAAAACak/MQF7WdfmBgI/s640/image00.png"></div>
+            </div>
+
+        </div>
 
     </div>
+
 </div>
 
 </body>
