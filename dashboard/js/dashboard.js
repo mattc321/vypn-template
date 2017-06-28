@@ -1,15 +1,26 @@
 window.onload = function(e){
-    console.log(4);
-    var navbutton= document.getElementById('#nav-button');
-    if(navbutton){
-        navbutton.addEventListener('click', function() {
+
+    (function() {
+        // Bind Click event to the drop down navigation button
+        document.querySelector('.nav-button').addEventListener('click', function() {
             /*  Toggle the CSS closed class which reduces the height of the UL thus
              hiding all LI apart from the first */
-            console.log('clicked');
-            //this.parentNode.parentNode.classList.toggle('closed')
+            this.parentNode.parentNode.classList.toggle('closed')
         }, false);
-    }
-} // End window load
+    })();
+
+    //console.log(4);
+    //var navbutton= document.getElementById('nav-button');
+    //if(navbutton){
+    //    navbutton.addEventListener('click', function() {
+    //        /*  Toggle the CSS closed class which reduces the height of the UL thus
+    //         hiding all LI apart from the first */
+    //        this.parentNode.parentNode.classList.toggle('closed');
+    //        console.log('clicked');
+    //        //this.parentNode.parentNode.classList.toggle('closed')
+    //    }, false);
+    //}
+}; // End window load
 
 
 //
