@@ -71,7 +71,7 @@ h5{font-size:1.2em;}
 
 .hamburger {
     float: right;
-    margin: 20px 20px;
+    margin: 10px 10px;
 }
 .top-menu-cont {
     border: 1px solid black;
@@ -104,8 +104,15 @@ h5{font-size:1.2em;}
 .right-menu-item {
     display: inline-block;
 }
+div#pro {
+    border: 1px solid #03a9f4;
+    background: #03a9f4;
+    color: #fff;
+}
+
 .wb-btn {
     background: #fff;
+    border: 1px solid transparent;
     padding: 10px 25px;
     margin: 10px 15px;
     border: 1px solid #fff;
@@ -113,9 +120,9 @@ h5{font-size:1.2em;}
 }
 .wb-btn:hover {
     border: 1px solid #03a9f4;
-    background: #03a9f4;
+    background: #fff !important;
     border-radius: 3px;
-    color: #fff;
+    color: #03a9f4 !important;
     font-weight: 600;
 
 }
@@ -171,11 +178,6 @@ h5{font-size:1.2em;}
 input:focus, input:hover, textarea:active, textarea:focus, textarea:hover {
 
 }
-div#pro {
-    border: 1px solid #03a9f4;
-    background: #03a9f4;
-    color: #fff;
-}
 
 nav .drop-down {
     list-style: none;
@@ -208,10 +210,20 @@ nav li a.nav-button {
 }
 nav .drop-down li a {
     display: block;
-    color: #ecf0f1;
+    color: #999;
     padding: 10px; /* Larger touch target area */
 }
 
+.g-signin2 img {
+    width: 200px;
+}
+.g-signin2 {
+    margin-top: 60px;
+}
+
+nav .drop-down li a:hover {
+
+}
 nav .drop-down li:first-child a:after {
     /*content: "\25BC";*/
     /*float: right;*/
