@@ -12,6 +12,9 @@
 </head>
 <body class="dashboard-body">
 <div class="outer-cont height100">
+
+
+    <!--LEFT CONTAINER-->
     <div class="col-left-75 height100 flexy">
         <div class="top-menu-cont">
             <a class="fixed-top heading-black" href="#">vyth</a>
@@ -26,7 +29,43 @@
                 </nav>
             </div>
         </div>
+
+        <!--OPENING SLOGAN-->
+        <div id="opening-slogan" class="center-left-cont flex-cont animated bounceIn">
+            <h2 class="slogan">Your files - your system</h2>
+            <span class="subtitle-blue">Or some other sick shit like that </span>
+        </div>
+
+        <!--AFTER UPLOAD ICON CONTAINER-->
+        <div id="after-upload" class="center-left-cont flex-cont hide-field">
+            <div class="icon download-icon hover"></div>
+            <span class="file-name">dbshit.tar.gz</span>
+            <span class="file-size">24.3 MB</span>
+        </div>
+
+        <!--UPLOAD ICON SELECT A FILE TO UPLOAD -->
+        <div id="select-a-file-upload" class="center-left-cont flex-cont hide-field">
+            <h3>Select or drag your file here</h3>
+            <span class="subtitle">Free 2GB File: <a href="#" class="blue-link">Pro: 50GB File</a></span>
+        </div>
+
+        <!--PREVIEW FILE DOWNLOAD -->
+        <div id="preview-download" class="center-left-cont flex-cont inline-layout hide-field">
+            <div class="file-info-block col-1">
+                <span class="file-name">dbshit.tar.gz</span>
+                <span class="sent-by">Sent by: <span>mcampbell@ashlandpoop.coop</span></span>
+                <span class="file-size">24.3 MB</span>
+                <button id="download-file" class="button btn btn-download">Download</button>
+            </div>
+            <div class="file-preview-block col-2">
+                <img src="video_preview.jpg"/>
+            </div>
+        </div>
+
     </div>
+
+
+    <!--RIGHT CONTAINER-->
     <div class="col-right-35 height100 flexy">
         <div class="right-menu-cont">
             <div class="center-menu">
@@ -40,8 +79,8 @@
         </div>
         <div id="login-cont" class="flexy text-center">
             <div class="text-center">
-                <form class="login-form" id="login" action="application.html" method="post">
-                    <h4 class="form-title">Sign In</h4>
+                <form class="login-form" id="login" action="#" method="post">
+                    <h3 class="form-title">Sign In</h3>
                     <input id="email" name="email" type="text" placeholder="Email">
                     <input id="password" name="password" type="text" placeholder="Password">
                     <input class="btn" type="submit" value="SUBMIT">

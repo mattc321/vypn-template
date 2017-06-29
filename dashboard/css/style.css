@@ -19,9 +19,23 @@ a {
     text-decoration: none;
     font-family: Raleway, Helvetica, Arial, sans-serif;
 }
+a.blue-link {
+    color: #03a9f4;
+    text-decoration: underline;
+}
+a.blue-link:hover {
+    color: #3498db;
+}
+span {
+    display: block;
+}
+
 h1{font-size:2.5em;}
 h2{font-size:2em;}
-h3{font-size:1.7em;}
+h3{
+    font-size:1.7em;
+    font-weight: normal;
+}
 h4{font-size:1.5em;}
 h5{font-size:1.2em;}
 
@@ -74,17 +88,32 @@ h5{font-size:1.2em;}
     margin: 10px 10px;
 }
 .top-menu-cont {
-    border: 1px solid black;
     height: 60px;
     width: 100%;
     top: 0;
     position: absolute;
 }
+
+h2.slogan {
+    font-weight: 500;
+    font-size: 2em;
+    color: #1c8fc3;
+}
+
+span.subtitle-blue {
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: .05em;
+    margin-right: 10px;
+    background: #03a9f4;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 2px #c7c7c7;
+}
 .right-menu-cont {
     position: absolute;
     top: 0;
     height: 60px;
-    border: 1px solid black;
     width: 33.333%;
     text-align: center;
 }
@@ -109,13 +138,21 @@ div#pro {
     background: #03a9f4;
     color: #fff;
 }
-
+.inline-layout {
+    display: inline;
+}
+.col-1 {
+    float: left;
+    margin: 0 auto;
+    width: 45%;
+    vertical-align: middle;
+    margin-top: 15vh;
+}
 .wb-btn {
     background: #fff;
     border: 1px solid transparent;
     padding: 10px 25px;
     margin: 10px 15px;
-    border: 1px solid #fff;
     transition: .4s;
 }
 .wb-btn:hover {
@@ -123,11 +160,52 @@ div#pro {
     background: #fff !important;
     border-radius: 3px;
     color: #03a9f4 !important;
-    font-weight: 600;
 
 }
 .hover {
     cursor: pointer;
+}
+.icon:hover {
+    background: #fff;
+    color: #03a9f4;
+}
+.icon {
+    margin: 0 auto;
+    padding: 20px 25px;
+    font-size: 2em;
+    background-color: #3498db;
+    border: 1px solid #3498db;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 1px 2px 2px #cbcbcb;
+    margin-bottom: 10px;
+    transition: .4s;
+}
+.download-icon:before {
+    content: "\21A7";
+}
+.upload-icon:before {
+    content:"\21A5";
+}
+
+span.file-size, span.subtitle, span.sent-by {
+    color: #a0a0a0;
+}
+span.file-name {
+    font-size: 1.3em;
+    margin: 10px;
+    font-weight: bold;
+}
+span.sent-by span {
+    display: inline;
+    font-weight: bold;
+}
+button.btn-download:after {
+    content: "\21A7";
+    padding-left: 20px;
+}
+button.btn-download {
+    padding: 10px 20px;
 }
 .login-form {
     width: 80%;
@@ -147,7 +225,7 @@ div#pro {
     /*padding: 10px;*/
     /*width: 55%;*/
 }
-.login-form .button, .login-form .submit, .login-form input[type="submit"] {
+.login-form .button, .login-form .submit, .login-form input[type="submit"], .button {
     background-color: rgb(52, 152, 219);
     color: rgb(255, 255, 255);
     border: 1px solid rgb(52, 152, 219);
@@ -161,7 +239,7 @@ div#pro {
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
-.login-form .button:hover, .login-form .submit:hover, .login-form input[type="submit"]:hover {
+.login-form .button:hover, .login-form .submit:hover, .login-form input[type="submit"]:hover, .button:hover {
     background: #FFF;
     color: #444;
     cursor: pointer;
@@ -420,6 +498,77 @@ nav .drop-down li:first-child a:after {
     animation-name: fadein;
 }
 
+@-webkit-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceOutDown {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(2000px);
+    }
+}
+
+@keyframes bounceOutDown {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+}
+
+.bounceOutDown {
+    -webkit-animation-name: bounceOutDown;
+    animation-name: bounceOutDown;
+}
 
 /*Media Queries*/
 @media (max-width: 1200px) {
@@ -444,4 +593,7 @@ nav .drop-down li:first-child a:after {
     h2, h3  {
         font-size:1.3rem !important;
     }
+}
+.hide-field {
+    display: none;
 }
