@@ -69,7 +69,6 @@ h5{font-size:1.2em;}
     top: 0;
     left: 0;
     padding: 20px;
-    /*background: #2196f3;*/
 }
 .heading-black, .heading-black a {
     font-size: 1.5em;
@@ -105,10 +104,8 @@ span.subtitle-blue {
     font-weight: 100;
     letter-spacing: .05em;
     margin-right: 10px;
-    background: #03a9f4;
-    color: #fff;
+    color: #000;
     padding: 10px;
-    box-shadow: 0 2px 2px #c7c7c7;
 }
 .right-menu-cont {
     position: absolute;
@@ -187,11 +184,16 @@ div#pro {
 .upload-icon:before {
     content:"\21A5";
 }
-
+.check-icon {
+    padding: 20px 23px;
+}
+.check-icon:before {
+    content:"\2713";
+}
 span.file-size, span.subtitle, span.sent-by {
     color: #a0a0a0;
 }
-span.file-name {
+span.file-name, span.title-line {
     font-size: 1.3em;
     margin: 10px;
     font-weight: bold;
@@ -207,6 +209,29 @@ button.btn-download:after {
 button.btn-download {
     padding: 10px 20px;
 }
+div#login-error {
+    width: 280px;
+    margin: 0 auto;
+    position: relative;
+}
+.failed {
+    border: 1px solid #bf4343 !important;
+}
+p.targetMsg {
+    margin-top: 25px;
+    text-align: center;
+    border: 1px solid #ffd3d0;
+    background: rgba(239, 139, 131, 0.19);
+    border-radius: 3px;
+    padding: 5px;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+
 .login-form {
     width: 80%;
     margin: 0 auto;
@@ -308,14 +333,41 @@ nav .drop-down li:first-child a:after {
     /*margin-left: -30px; /!* Excessive -margin to bring link text back to center *!/*/
     /*margin-right: 5px;*/
 }
+input.sub-input {
+    width: 250px;
+    padding: 8px 10px;
+    /* height: 35px; */
+    background: #efefef;
+    /* margin: 0; */
+    border: 1px solid #dcdcdc;
+}
+button.copy-button {
+    width: 50px;
+    margin-left: -5px;
+    height: 35px;
+}
+button.copy-button {
+    width: 50px;
+    margin-left: -5px;
+    height: 35px;
+    border-radius: 0;
+}
 
 /*Animations and Keyframes*/
 .animated {
-    -webkit-animation-duration: .3s;
-    animation-duration: .3s;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+.animated-slow {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
 @-webkit-keyframes bounceOut {
     0% {
         -webkit-transform: scale(1);
@@ -459,6 +511,25 @@ nav .drop-down li:first-child a:after {
 .bounceOutRight {
     -webkit-animation-name: bounceOutRight;
     animation-name: bounceOutRight;
+}
+
+@keyframes foldOutLeft {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+}
+
+.foldOutLeft {
+    -webkit-animation-name: foldOutLeft;
+    animation-name: foldOutLeft;
 }
 
 @keyframes fadein {

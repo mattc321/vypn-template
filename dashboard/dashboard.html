@@ -31,7 +31,7 @@
         </div>
 
         <!--OPENING SLOGAN-->
-        <div id="opening-slogan" class="center-left-cont flex-cont animated bounceIn">
+        <div id="opening-slogan" class="center-left-cont flex-cont animated bounceIn hide-field">
             <h2 class="slogan">Your files - your system</h2>
             <span class="subtitle-blue">Or some other sick shit like that </span>
         </div>
@@ -62,6 +62,16 @@
             </div>
         </div>
 
+        <!--UPLOAD COMPLETE -->
+        <div id="upload-complete" class="center-left-cont flex-cont">
+            <div class="icon check-icon hover"></div>
+            <span class="title-line">Upload Completed!</span>
+            <div class="group-options">
+                <input id="upload-link" name="upload-link" class="sub-input" value="http://getvaluefromurlandputithere.com/mylink.png">
+                <button id="copy-link" class="button copy-button">Copy</button>
+            </div>
+        </div>
+
     </div>
 
 
@@ -83,7 +93,10 @@
                     <h3 class="form-title">Sign In</h3>
                     <input id="email" name="email" type="text" placeholder="Email">
                     <input id="password" name="password" type="text" placeholder="Password">
-                    <input class="btn" type="submit" value="SUBMIT">
+                    <input class="btn" type="submit" value="SUBMIT" onclick="return submit_login()">
+                    <div id="login-error" class="hide-field">
+                        <p class="targetMsg"></p>
+                    </div>
                 </form>
             </div>
             <div class="google-signin">
