@@ -1,6 +1,7 @@
 window.onload = function(e){
 
 //<------- Listeners -------->>
+    //top menu Sign In button
     var btnSignIn = document.getElementById('signin');
     if(btnSignIn){
         btnSignIn.addEventListener('click', fSignIn, false);
@@ -10,11 +11,6 @@ window.onload = function(e){
     var btnCopyLink = document.getElementById('copy-link');
     if(btnCopyLink){
         btnCopyLink.addEventListener('click', fCopyLink, false);
-    }
-
-    var btnLogin = document.getElementById('copy-link');
-    if(btnLogin){
-        btnLogin.addEventListener('click', fCopyLink, false);
     }
 
     //file link select all when click
@@ -58,9 +54,10 @@ function fCopyLink() {
     }
 }
 
+//top menu signin button
 function fSignIn(){
-    console.log('clicked signin');
-        addAnimation(document.getElementById("login-cont"), 'bounceIn');
+
+    addAnimation(document.getElementById("login-cont"), 'bounceIn');
 
         //setTimeout(function() {
         //    //document.getElementById("first").style.display="none";
@@ -100,7 +97,7 @@ function addAnimation(param, classAnimate) {
     }
 }
 function submit_login(){
-console.log('clicked login');
+
     if (validate_login(event) == false) {
         console.log('validate was false');
     } else {
@@ -118,6 +115,9 @@ console.log('clicked login');
     }
 }
 
+/** Function that handles login.
+* Put in api here to validate username/passwd
+**/
 function validate_login(event){
     event.preventDefault();
     event.stopPropagation();
@@ -127,6 +127,7 @@ function validate_login(event){
     var txtpass  = document.getElementById('password');
 
 
+    //check that there are values
     if (txtemail.value.length == 0) {
         i=1;
         if (!txtemail.classList.contains('failed')) {
@@ -146,7 +147,7 @@ function validate_login(event){
     }
 
 
-    //finish set the alert
+    //set an alert if no values.
     if (i > 0) {
         tellEm('You forgot something', 'login-error');
         unHide('login-error');
@@ -157,8 +158,13 @@ function validate_login(event){
 
         tellEm('', 'login-error');
         unHide('login-error');
-        return true;
     }
+
+    //login callback
+    console.log(txtemail.value);
+    console.log(txtpass.value);
+
+    return true;
 
 }
 
@@ -174,17 +180,16 @@ function tellEm(msg, el) {
 }
 
 function unHide(paramID) {
-    console.log(11);
     var element = document.getElementById(paramID);
     console.log(element.classList);
     if (element.classList.contains('hide-field')) {
-        console.log(12);
         element.classList.remove('hide-field');
     }
 }
 function HideIt(paramID) {
+    var classToAdd = 'hide-field';
     var element = document.getElementById(paramID);
-    var classString = paramID.className; // returns the string of all the classes for element
+    var classString = element.className; // returns the string of all the classes for element
     var newClass = classString.concat(" " + classToAdd);
-    param.className = newClass;
+    element.className = newClass;
 }

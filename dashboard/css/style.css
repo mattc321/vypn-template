@@ -185,7 +185,7 @@ div#pro {
     content:"\21A5";
 }
 .check-icon {
-    padding: 20px 23px;
+    padding: 20px 21px;
 }
 .check-icon:before {
     content:"\2713";
@@ -344,15 +344,14 @@ input.sub-input {
 button.copy-button {
     width: 50px;
     margin-left: -5px;
-    height: 35px;
-}
-button.copy-button {
-    width: 50px;
-    margin-left: -5px;
+    margin-top:0;
     height: 35px;
     border-radius: 0;
 }
-
+.group-options {
+    display: flex;
+    margin: 15px auto;
+}
 /*Animations and Keyframes*/
 .animated {
     -webkit-animation-duration: .5s;
