@@ -21,36 +21,42 @@
             <div class="hamburger">
                 <nav>
                     <ul class="drop-down closed">
-                        <li><a href="#" class="nav-button">&#9776;</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Library</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li class="nav-item"><a href="#" class="nav-button">&#9776;</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="after-upload">After Upload</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="opening-slogan">Opening Slogan</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="select-a-file-upload">Select File</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="preview-download">Preview Download</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="upload-complete">Upload Complete</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="login-cont">Login Form</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="right-menu-cont">Right Menu</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
 
         <!--OPENING SLOGAN-->
-        <div id="opening-slogan" class="center-left-cont flex-cont animated bounceIn hide-field">
+        <div id="opening-slogan" class="center-left-cont flex-cont hide-field animated bounceIn">
             <h2 class="slogan">Your files - your system</h2>
             <span class="subtitle-blue">Or some other sick shit like that </span>
         </div>
 
         <!--AFTER UPLOAD ICON CONTAINER-->
-        <div id="after-upload" class="center-left-cont flex-cont hide-field">
+        <div id="after-upload" class="center-left-cont flex-cont hide-field animated fadein">
             <div class="icon download-icon hover"></div>
             <span class="file-name">dbshit.tar.gz</span>
             <span class="file-size">24.3 MB</span>
         </div>
 
         <!--UPLOAD ICON SELECT A FILE TO UPLOAD -->
-        <div id="select-a-file-upload" class="center-left-cont flex-cont hide-field">
-            <h3>Select or drag your file here</h3>
-            <span class="subtitle">Free 2GB File: <a href="#" class="blue-link">Pro: 50GB File</a></span>
+        <div id="select-a-file-upload" class="center-left-cont flex-cont hide-field animated-slow fadein">
+            <div class="drag-n-drop inner-cont">
+                <h3>Select and drag your file here</h3>
+                <span class="subtitle">Free 2GB File: <a href="#" class="blue-link">Pro: 50GB File</a></span>
+            </div>
         </div>
 
         <!--PREVIEW FILE DOWNLOAD -->
-        <div id="preview-download" class="center-left-cont flex-cont inline-layout hide-field">
+        <div id="preview-download" class="center-left-cont flex-cont inline-layout hide-field animated fadein">
             <div class="file-info-block col-1">
                 <span class="file-name">dbshit.tar.gz</span>
                 <span class="sent-by">Sent by: <span>mcampbell@ashlandpoop.coop</span></span>
@@ -63,7 +69,7 @@
         </div>
 
         <!--UPLOAD COMPLETE -->
-        <div id="upload-complete" class="center-left-cont flex-cont">
+        <div id="upload-complete" class="center-left-cont flex-cont animated fadein">
             <div class="icon check-icon hover"></div>
             <span class="title-line">Upload Completed!</span>
             <div class="group-options">
@@ -87,20 +93,40 @@
                 </div>
             </div>
         </div>
-        <div id="login-cont" class="flexy text-center">
+
+        <!--LOGIN FORM CONTAINER -->
+        <div id="login-cont" class="flexy text-center hide-field">
             <div class="text-center">
                 <form class="login-form" id="login" action="#" method="post">
                     <h3 class="form-title">Sign In</h3>
                     <input id="email" name="email" type="text" placeholder="Email">
                     <input id="password" name="password" type="text" placeholder="Password">
                     <input class="btn" type="submit" value="SUBMIT" onclick="return submit_login()">
-                    <div id="login-error" class="hide-field">
-                        <p class="targetMsg"></p>
-                    </div>
                 </form>
+            </div>
+            <div id="login-error" class="hide-field">
+                <p class="targetMsg"></p>
             </div>
             <div class="google-signin">
                 <div class="g-signin2" data-onsuccess="onSignIn"><img src="http://3.bp.blogspot.com/-Ep_sMHCGb-M/Vl9h5smpeaI/AAAAAAAACak/MQF7WdfmBgI/s640/image00.png"></div>
+            </div>
+
+        </div>
+
+        <!--RIGHT MENU CONTAINER -->
+        <div id="right-menu-cont" class="flexy text-center">
+            <div id="usage-graph">
+                <img id="link-to-graph" src="disk-usage.png"/>
+                <span class="real-name">Noah Wilcox</span>
+                <span class="file-size">24GB Used</span>
+            </div>
+
+            <div class="usage-menu-cont">
+                <ul id="usage-menu" class="usage-menu">
+                    <li class="full-width-li">Upload</li>
+                    <li class="full-width-li">Transfers</li>
+                    <li class="full-width-li">Contacts</li>
+                </ul>
             </div>
 
         </div>

@@ -21,16 +21,55 @@ window.onload = function(e){
         }, false);
     }
 
+    //listeners to nav-action class
+    var classname = document.getElementsByClassName('nav-action');
+    if(classname){
+        for (var i = 0; i < classname.length; i++) {
+            classname[i].addEventListener('click', function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                //get id to unhide
+                var idToShow = this.getAttribute('data-id');
+                menuSelect(idToShow);
+            });
+        }
+    }
+
 
 
 //<------- Other styff -------->>
     //Hamburger Menu
     (function() {
         // Bind Click event to the drop down navigation button
+        var isMouseDown = false;
         document.querySelector('.nav-button').addEventListener('click', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
              hiding all LI apart from the first */
             this.parentNode.parentNode.classList.toggle('closed')
+            this.focus()
         }, false);
+        document.querySelector('.nav-button').addEventListener('mousedown', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
+         hiding all LI apart from the first */
+            isMouseDown = true;
+        }, false);
+        document.querySelector('.nav-button').addEventListener('mouseup', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
+         hiding all LI apart from the first */
+            isMouseDown = true;
+        }, false);
+        document.querySelector('.nav-button').addEventListener('mouseleave', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
+         hiding all LI apart from the first */
+            isMouseDown = true;
+        }, false);
+        document.querySelector('.nav-button').addEventListener('blur', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
+         hiding all LI apart from the first */
+            if (isMouseDown) {
+                this.parentNode.parentNode.classList.toggle('closed');
+            } else {
+                console.log('isnot');
+            }
+        }, false);
+
+
+
     })();
 
 }; // End window load
@@ -115,8 +154,8 @@ function submit_login(){
     }
 }
 
-/** Function that handles login.
-* Put in api here to validate username/passwd
+/**
+* Function that handles login. Put in api here to validate username/passwd
 **/
 function validate_login(event){
     event.preventDefault();
@@ -186,10 +225,36 @@ function unHide(paramID) {
         element.classList.remove('hide-field');
     }
 }
-function HideIt(paramID) {
+function hideIt(paramID) {
     var classToAdd = 'hide-field';
     var element = document.getElementById(paramID);
-    var classString = element.className; // returns the string of all the classes for element
-    var newClass = classString.concat(" " + classToAdd);
-    element.className = newClass;
+    if (!element.classList.contains('hide-field')) {
+        var classString = element.className; // returns the string of all the classes for element
+        var newClass = classString.concat(" " + classToAdd);
+        element.className = newClass;
+    }
+}
+
+//menu select function
+//this is primarily used to show the
+//transitions between frames. You can of course
+//just use normal links in the menu as well, without the nav-action class.
+function menuSelect(paramID) {
+    var ele = document.getElementById(paramID);
+
+    var array = [];
+    array.push({ value: 'after-upload' });
+    array.push({ value: 'opening-slogan' });
+    array.push({ value: 'select-a-file-upload' });
+    array.push({ value: 'preview-download' });
+    array.push({ value: 'upload-complete' });
+    array.push({ value: 'login-cont' });
+    array.push({ value: 'right-menu-cont' });
+
+    for (var i = 0; i < array.length; i++) {
+        console.log('hiding ' + array[i].value);
+        hideIt(array[i].value);
+    }
+    unHide(paramID);
+
 }
