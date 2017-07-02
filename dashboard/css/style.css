@@ -23,7 +23,8 @@ a.blue-link {
     color: #03a9f4;
     text-decoration: underline;
 }
-a.blue-link:hover {
+a.blue-link:hover, a:active, a:focus,  ul.usage-menu li a:active,
+ul.usage-menu li a:focus, ul.usage-menu li a:hover {
     color: #3498db;
 }
 span {
@@ -48,6 +49,7 @@ h5{font-size:1.2em;}
 .height100 {
     height: 100vh;
     /*overflow: hidden;*/
+    overflow-y: scroll;
 }
 .flex-cont {
     text-align: center;
@@ -85,6 +87,8 @@ h5{font-size:1.2em;}
 .hamburger {
     float: right;
     margin: 10px 10px;
+    position: relative;
+    z-index: 999;
 }
 .top-menu-cont {
     height: 60px;
@@ -256,7 +260,7 @@ p.targetMsg {
 
 
 .login-form {
-    width: 80%;
+    /*width: 80%;*/
     margin: 0 auto;
 }
 .login-form input {
@@ -332,7 +336,7 @@ nav .drop-down li:first-child a {
 }
 
 ul.drop-down li {
-    background: rgba(183, 183, 183, 0.17);
+    background: #e8e8e8;
     border-bottom: 1px solid #fff;
 }
 ul.drop-down li:first-child {
@@ -395,6 +399,58 @@ button.copy-button {
     display: flex;
     margin: 15px auto;
 }
+
+div#right-menu-cont {
+    margin: 0 auto;
+    /* display: inline-flex; */
+}
+div#usage-graph {
+    width: 220px;
+}
+div#user-menu-cont {
+    margin-top: 10px;
+}
+.mid-margin {
+    margin:0 auto;
+}
+div#usage-graph {
+    width: 220px;
+    margin: 0 auto;
+}
+img#link-to-graph {
+    float: left;
+    /* width: 46px; */
+}
+.usage-menu-cont {
+    /* float: left; */
+    /* width: 50%; */
+    clear: both;
+    margin-top: 100px;
+}
+ul.usage-menu {
+    list-style: none;
+    /* list-style-type: none; */
+    /* list-style-image: none; */
+    padding-left: 0;
+    border-top: 1px solid #eaeaea;
+}
+ul.usage-menu li a {
+    padding: 20px;
+    width: 100%;
+    display: block;
+    color: #999;
+}
+ul.usage-menu li {
+    text-indent: 65px;
+    list-style-type: none;
+    text-align: left;
+    list-style: none;
+    /* background: #ffffff; */
+}
+ul.usage-menu li:hover {
+    background: linear-gradient(#f7f7f7, #e8e8e8);
+}
+
 /*Animations and Keyframes*/
 .animated {
     -webkit-animation-duration: .5s;

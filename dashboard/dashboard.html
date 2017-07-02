@@ -6,7 +6,9 @@
     <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
     <!--<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
     <script src="js/dashboard.js"></script>
+    <!--<script src="js/sticky.js"></script>-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet prefetch">
     <title>vyth Shake That Booty</title>
 </head>
@@ -28,7 +30,7 @@
                         <li class="nav-item"><a href="#" class="nav-action" data-id="preview-download">Preview Download</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="upload-complete">Upload Complete</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="login-cont">Login Form</a></li>
-                        <li class="nav-item"><a href="#" class="nav-action" data-id="right-menu-cont">Right Menu</a></li>
+                        <li class="nav-item"><a href="#" class="nav-action" data-id="user-menu-cont">User Menu Right</a></li>
                     </ul>
                 </nav>
             </div>
@@ -69,7 +71,7 @@
         </div>
 
         <!--UPLOAD COMPLETE -->
-        <div id="upload-complete" class="center-left-cont flex-cont animated fadein">
+        <div id="upload-complete" class="center-left-cont flex-cont animated fadein hide-field">
             <div class="icon check-icon hover"></div>
             <span class="title-line">Upload Completed!</span>
             <div class="group-options">
@@ -78,11 +80,51 @@
             </div>
         </div>
 
+        <!--TRANSFERS PAGE -->
+        <div id="transfers-table" class="center-left-cont flex-cont animated fadein">
+                <div class="component">
+                <h3 class="grey">Transfers</h3>
+                <p></p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Link</th>
+                        <th>Size</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    <tr><td class="file-name">file name</td><td class="file-link">http://google.com/wtf/thisIsaLink?Tothe-mother-fkin-textfile?.s=1</td><td class="tbl-file-size">980 Mb</td><td class="tbl-item-options">...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
 
-    <!--RIGHT CONTAINER-->
+    <!--RIGHT CONTAINER MAIN -->
     <div class="col-right-35 height100 flexy">
+        <!--right top menu contain-->
         <div class="right-menu-cont">
             <div class="center-menu">
                 <div id="signin" class="right-menu-item wb-btn hover">
@@ -91,6 +133,23 @@
                 <div id="pro" class="right-menu-item wb-btn hover">
                     PRO
                 </div>
+            </div>
+            <!--USER MENU CONTAINER -->
+            <div id="user-menu-cont" class="mid-margin">
+                <div id="usage-graph" class="mid-margin">
+                    <img id="link-to-graph" src="disk-usage.png"/>
+                    <span class="real-name">Noah Wilcox</span>
+                    <span class="file-size">24GB Used</span>
+                </div>
+
+                <div class="usage-menu-cont">
+                    <ul id="usage-menu" class="usage-menu">
+                        <li class="full-width-li"><a href="#" class="user-menu-item">Upload</a></li>
+                        <li class="full-width-li"><a href="#" class="user-menu-item">Transfers</a></li>
+                        <li class="full-width-li"><a href="#" class="user-menu-item">Contacts</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
@@ -113,27 +172,8 @@
 
         </div>
 
-        <!--RIGHT MENU CONTAINER -->
-        <div id="right-menu-cont" class="flexy text-center">
-            <div id="usage-graph">
-                <img id="link-to-graph" src="disk-usage.png"/>
-                <span class="real-name">Noah Wilcox</span>
-                <span class="file-size">24GB Used</span>
-            </div>
-
-            <div class="usage-menu-cont">
-                <ul id="usage-menu" class="usage-menu">
-                    <li class="full-width-li">Upload</li>
-                    <li class="full-width-li">Transfers</li>
-                    <li class="full-width-li">Contacts</li>
-                </ul>
-            </div>
-
-        </div>
-
     </div>
 
 </div>
-
 </body>
 </html>
