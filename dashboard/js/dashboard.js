@@ -215,20 +215,25 @@ function hideIt(paramID) {
 //just use normal links in the menu as well, without the nav-action class.
 function menuSelect(paramID) {
 
+    //loop through menu items and get all their child link data-ids
+    //the data-id of an element will be the div id you want to show
+
+    var menu = document.getElementById('top-menu');
     var ele = document.getElementById(paramID);
-
     var array = [];
-    array.push({ value: 'after-upload' });
-    array.push({ value: 'opening-slogan' });
-    array.push({ value: 'select-a-file-upload' });
-    array.push({ value: 'preview-download' });
-    array.push({ value: 'upload-complete' });
-    array.push({ value: 'login-cont' });
-    array.push({ value: 'user-menu-cont' });
+    var array_items = 0;
+    var items = menu.getElementsByTagName('li');
 
+    //looping through menu, getting ids, building an array
+    for (var j = 0; j < items.length; j++) {
+        if (items[j].childNodes[0].getAttribute('data-id')) {
+            array.push (items[j].childNodes[0].getAttribute('data-id'));
+        }
+
+    }
+    //now hide all other ids and display the one that was clicked
     for (var i = 0; i < array.length; i++) {
-        //console.log('hiding ' + array[i].value);
-        hideIt(array[i].value);
+        hideIt(array[i]);
     }
     unHide(paramID);
 

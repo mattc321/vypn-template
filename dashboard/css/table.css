@@ -49,45 +49,34 @@ tbody tr:hover {
 tbody tr, tbody td {
 	font-size: .9em;
 }
-/* For appearance */
-.sticky-wrap {
-	overflow-x: auto;
-	overflow-y: hidden;
-	position: relative;
-	margin: 3em 0;
-	width: 100%;
-}
-.sticky-wrap .sticky-thead,
-.sticky-wrap .sticky-col,
-.sticky-wrap .sticky-intersect {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: all .125s ease-in-out;
-	z-index: 50;
-	width: auto; /* Prevent table from stretching to full size */
-}
-.sticky-wrap .sticky-thead {
-	box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
-	z-index: 100;
-	width: 100%; /* Force stretch */
-}
-.sticky-wrap .sticky-intersect {
-	opacity: 1;
-	z-index: 150;
+.sticky-right {
+	float: right;
+	width: 18%;
+	text-align: left;
+	padding: 10px;
+	margin-top: -41px;
 
 }
-.sticky-wrap .sticky-intersect th {
-	background-color: #666;
-	color: #eee;
-}
-.sticky-wrap td,
-.sticky-wrap th {
-	box-sizing: border-box;
-}
+.sticky-center {
+	display: block;
+	width: 78%;
+	text-align: left;
 
-/* Not needed for sticky header/column functionality */
+	padding: 10px;
+}
+.sticky-left {
+	float: left;
+	width: 15%;
+	text-align: left;
+
+	padding: 10px;
+}
+/*<div class="sticky-wrap">*/
+/*<div class="sticky-left">Name</div>*/
+/*<div class="sticky-center">Link</div>*/
+/*<div class="sticky-right">Size</div>*/
+/*</div>* NOT USING FOR NOW/
+
 td.file-name {
 	text-transform: capitalize;
 }

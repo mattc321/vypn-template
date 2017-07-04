@@ -90,11 +90,23 @@ h5{font-size:1.2em;}
     position: relative;
     z-index: 999;
 }
+/*.top-menu-cont {*/
+    /*height: 60px;*/
+    /*width: 100%;*/
+    /*top: 0;*/
+    /*position: absolute;*/
+/*}*/
+
+/*trying sticky*/
 .top-menu-cont {
     height: 60px;
-    width: 100%;
+    width: 75.555%;
     top: 0;
-    position: absolute;
+    transition: 1s;
+    position: fixed;
+    left: -45px;
+    background: #fff;
+    z-index: 999;
 }
 
 h2.slogan {
