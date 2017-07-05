@@ -35,25 +35,32 @@ window.onload = function(e){
         }
     }
 
-//<------- Other styff -------->>
+//<------- Other stuff -------->>
     //Hamburger Menu
     (function() {
         // Bind Click event to the drop down navigation button
         var isMouseDown = false;
-        document.querySelector('.nav-button').addEventListener('click', function() { /*  Toggle the CSS closed class which reduces the height of the UL thus
-             hiding all LI apart from the first */
-
+        document.querySelector('.nav-button').addEventListener('click', function() {
             this.parentNode.parentNode.classList.toggle('closed');
-            //this.focus();
-            //this.parentNode.focus();
-            this.parentnode.focus();
+            this.focus();
+            isMouseDown = false;
         }, false);
 
-        document.querySelector('#top-menu').addEventListener('blur', function() {
-            console.log('jey');
-            this.parentNode.parentNode.classList.toggle('closed')
-        }, false);
-
+        //If the doc is clicked outside the menu while it is open, then close it
+        document.onclick = function(e){
+            var menuBtn = document.getElementById('top-menu');
+            if (isMouseDown) {
+                if (!menuBtn.classList.contains('closed')) {
+                    console.log('im open');
+                    //menuBtn.classList.toggle('closed');
+                    addClass(menuBtn, 'closed');
+                    //menuBtn.classList.remove('closed');
+                    isMouseDown = false;
+                }
+            } else {
+                isMouseDown = true;
+            }
+        };
     })();
 }; // End window load
 
@@ -89,6 +96,12 @@ function fSignIn(){
         //},400)
 }
 
+//This is a blind add class function. Doesnt care if class exists.
+function addClass(param, classToAdd) {
+    var classString = param.className;
+    var newClass = classString.concat(" " + classToAdd);
+    param.className = newClass;
+}
 
 function addMyClass(param, classToAdd) {
     //if it has the class
