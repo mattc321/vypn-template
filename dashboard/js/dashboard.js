@@ -44,12 +44,17 @@ window.onload = function(e){
              hiding all LI apart from the first */
 
             this.parentNode.parentNode.classList.toggle('closed');
-            this.focus();
+            //this.focus();
+            //this.parentNode.focus();
+            this.parentnode.focus();
         }, false);
 
+        document.querySelector('#top-menu').addEventListener('blur', function() {
+            console.log('jey');
+            this.parentNode.parentNode.classList.toggle('closed')
+        }, false);
 
     })();
-
 }; // End window load
 
 //function to select whole textfield
