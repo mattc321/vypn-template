@@ -43,7 +43,7 @@ window.onload = function(e){
 //<-------Top Menu stuff -------->>
     (function() {
         // Bind Click event to the drop down navigation button
-        document.getElementById('top-menu').addEventListener('mouseout',onMouseOut,true);
+        //document.getElementById('top-menu').addEventListener('mouseout',onMouseOut,true);
         var isMouseDown = false;
         document.querySelector('.nav-button').addEventListener('click', function() {
             this.parentNode.parentNode.classList.toggle('closed');
@@ -65,6 +65,8 @@ window.onload = function(e){
         };
     })();
 }; // End window load
+
+
 
 function fPro () {
     alert('do something for pro click');
