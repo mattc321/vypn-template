@@ -29,7 +29,6 @@
                         <li class="nav-item"><a href="#" class="nav-action" data-id="select-a-file-upload">Select File</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="preview-download">Preview Download</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="upload-complete">Upload Complete</a></li>
-                        <li class="nav-item"><a href="#" class="nav-action" data-id="login-cont">Login Form</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="user-menu-cont">User Menu Right</a></li>
                         <li class="nav-item"><a href="#" class="nav-action" data-id="transfers-table">Transfers Page</a></li>
                     </ul>
@@ -38,7 +37,7 @@
         </div>
 
         <!--OPENING SLOGAN-->
-        <div id="opening-slogan" class="center-left-cont flex-cont hide-field animated bounceIn">
+        <div id="opening-slogan" class="center-left-cont flex-cont animated bounceIn">
             <h2 class="slogan">Your files - your system</h2>
             <span class="subtitle-blue">Or some other sick shit like that </span>
         </div>
@@ -83,9 +82,13 @@
         </div>
 
         <!--TRANSFERS PAGE -->
-        <div id="transfers-table" class="center-left-cont flex-cont animated fadein">
+        <div id="transfers-table" class="center-left-cont flex-cont animated fadein hide-field">
                 <div class="component">
-                <h3 class="grey">Transfers</h3>
+                    <div class="transfers-header">
+                        <button id="add-file" class="icon plus-icon hover nav-action" data-id="select-a-file-upload"></button>
+                        <h3 class="text-left">Transfers</h3>
+                    </div>
+
                 <p></p>
                 <table>
                     <thead>
@@ -121,6 +124,10 @@
             </div>
         </div>
 
+        <div id="contacts" class="contacts-page animated fadein hide-field">
+            <h3 class="text-left">Contacts</h3>
+        </div>
+
     </div>
 
 
@@ -129,7 +136,7 @@
         <!--right top menu contain-->
         <div class="right-menu-cont">
             <div class="center-menu">
-                <div id="signin" class="right-menu-item wb-btn hover">
+                <div id="signin" class="right-menu-item wb-btn hover nav-action" data-id="login-cont">
                     Sign In
                 </div>
                 <div id="pro" class="right-menu-item wb-btn hover">
@@ -137,7 +144,7 @@
                 </div>
             </div>
             <!--USER MENU CONTAINER -->
-            <div id="user-menu-cont" class="mid-margin">
+            <div id="user-menu-cont" class="mid-margin animated-slow bounceInDown hide-field">
                 <div id="usage-graph" class="mid-margin">
                     <img id="link-to-graph" src="disk-usage.png"/>
                     <span class="real-name">Noah Wilcox</span>
@@ -146,9 +153,9 @@
 
                 <div class="usage-menu-cont">
                     <ul id="usage-menu" class="usage-menu">
-                        <li class="full-width-li"><a href="#" class="user-menu-item">Upload</a></li>
-                        <li class="full-width-li"><a href="#" class="user-menu-item">Transfers</a></li>
-                        <li class="full-width-li"><a href="#" class="user-menu-item">Contacts</a></li>
+                        <li class="full-width-li"><a href="#" class="user-menu-item nav-action" data-id="select-a-file-upload">Upload</a></li>
+                        <li class="full-width-li"><a href="#" class="user-menu-item nav-action" data-id="transfers-table">Transfers</a></li>
+                        <li class="full-width-li"><a href="#" class="user-menu-item nav-action" data-id="contacts">Contacts</a></li>
                     </ul>
                 </div>
 
@@ -156,12 +163,12 @@
         </div>
 
         <!--LOGIN FORM CONTAINER -->
-        <div id="login-cont" class="flexy text-center hide-field">
+        <div id="login-cont" class="flexy text-center animated bounceIn">
             <div class="text-center">
                 <form class="login-form" id="login" action="#" method="post">
                     <h3 class="form-title">Sign In</h3>
                     <input id="email" name="email" type="text" placeholder="Email">
-                    <input id="password" name="password" type="text" placeholder="Password">
+                    <input id="password" name="password" type="password" placeholder="Password">
                     <input class="btn" type="submit" value="SUBMIT" onclick="return submit_login()">
                 </form>
             </div>

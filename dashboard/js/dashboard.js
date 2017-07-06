@@ -28,12 +28,26 @@ window.onload = function(e){
             classname[i].addEventListener('click', function(e){
                 e.preventDefault();
                 e.stopPropagation();
-                //get id to unhide\
+                //get id to unhide
                 var idToShow = this.getAttribute('data-id');
-                menuSelect(idToShow);
+                leftMenuSelect(idToShow);
             });
         }
     }
+
+    //listeners to user-menu-action class
+    //var cname = document.getElementsByClassName('user-menu-action');
+    //if(cname){
+    //    for (var j = 0; j < cname.length; j++) {
+    //        cname[j].addEventListener('click', function(e){
+    //            e.preventDefault();
+    //            e.stopPropagation();
+    //            //get id to unhide
+    //            var idToShow = this.getAttribute('data-id');
+    //            rightMenuSelect(idToShow);
+    //        });
+    //    }
+    //}
 
 //<------- Other stuff -------->>
     //Hamburger Menu
@@ -51,10 +65,7 @@ window.onload = function(e){
             var menuBtn = document.getElementById('top-menu');
             if (isMouseDown) {
                 if (!menuBtn.classList.contains('closed')) {
-                    console.log('im open');
-                    //menuBtn.classList.toggle('closed');
                     addClass(menuBtn, 'closed');
-                    //menuBtn.classList.remove('closed');
                     isMouseDown = false;
                 }
             } else {
@@ -63,6 +74,23 @@ window.onload = function(e){
         };
     })();
 }; // End window load
+
+
+function getLeftFrameList(){
+    var array = [];
+
+    array.push({value:"after-upload"});
+    array.push({value:"opening-slogan"});
+    array.push({value:"select-a-file-upload"});
+    array.push({value:"preview-download"});
+    array.push({value:"upload-complete"});
+    //array.push({value:"login-cont"});
+    //array.push({value:"user-menu-cont"});
+    array.push({value:"transfers-table"});
+    array.push({value:"contacts"});
+    //array.push({value:""});
+    return array;
+}
 
 //function to select whole textfield
 function fSelectAll(paramID) {
@@ -127,22 +155,22 @@ function addAnimation(param, classAnimate) {
         param.className = newClass;
     }
 }
-function submit_login(){
 
+function showLeftFrame(frameId) {
+    console.log(frameId);
+    var frame = document.getElementById(frameId);
+    if (frame.classList.contains('hide-field')) {
+
+    }
+}
+function submit_login(){
     if (validate_login(event) == false) {
         console.log('validate was false');
     } else {
-        //setTimeout(function() {
-        //    document.getElementById("first").style.display="none";
-        //    document.getElementById("second").style.opacity=0;
-        //    document.getElementById("second").style.display="block";
-        //    addAnimation(document.getElementById("second"), 'bounceIn');
-        //    document.getElementById("second").style.opacity=1;
-        //    document.getElementById("first").style.display="none";
-        //    addAnimation(document.getElementById("first"), 'bounceOutRight');
-        //},400)
-
         console.log('validate was true');
+        //if login was successful
+        unHide('user-menu-cont');
+        hideIt('login-cont');
     }
 }
 
@@ -231,7 +259,7 @@ function hideIt(paramID) {
 //this is primarily used to show the
 //transitions between frames. You can of course
 //just use normal links in the menu as well, without the nav-action class.
-function menuSelect(paramID) {
+function MenuSelect(paramID) {
 
     //loop through menu items and get all their child link data-ids
     //the data-id of an element will be the div id you want to show
@@ -255,4 +283,17 @@ function menuSelect(paramID) {
     }
     unHide(paramID);
 
+}
+
+function leftMenuSelect(paramID) {
+
+    //loop through menu items and get all their child link data-ids
+    //the data-id of an element will be the div id you want to show
+
+    var frameList = getLeftFrameList();
+
+    for (var i = 0; i < frameList.length; i++) {
+        hideIt(frameList[i].value);
+    }
+    unHide(paramID);
 }
