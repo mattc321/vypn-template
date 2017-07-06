@@ -69,17 +69,3 @@ tbody tr, tbody td {
 
 	padding: 10px;
 }
-/*<div class="sticky-wrap">*/
-/*<div class="sticky-left">Name</div>*/
-/*<div class="sticky-center">Link</div>*/
-/*<div class="sticky-right">Size</div>*/
-/*</div>* NOT USING FOR NOW/
-
-td.file-name {
-	text-transform: capitalize;
-}
-.sticky-wrap.overflow-y {
-	overflow-y: auto;
-	max-height: 50vh;
-}
-

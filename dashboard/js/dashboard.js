@@ -40,22 +40,6 @@ window.onload = function(e){
         }
     }
 
-    //var nav = document.getElementById('top-menu');
-    //nav.addEventListener('onmouseout', onMouseOut, true);
-    //listeners to user-menu-action class
-    //var cname = document.getElementsByClassName('user-menu-action');
-    //if(cname){
-    //    for (var j = 0; j < cname.length; j++) {
-    //        cname[j].addEventListener('click', function(e){
-    //            e.preventDefault();
-    //            e.stopPropagation();
-    //            //get id to unhide
-    //            var idToShow = this.getAttribute('data-id');
-    //            rightMenuSelect(idToShow);
-    //        });
-    //    }
-    //}
-
 //<-------Top Menu stuff -------->>
     (function() {
         // Bind Click event to the drop down navigation button
@@ -82,23 +66,6 @@ window.onload = function(e){
     })();
 }; // End window load
 
-function onMouseOut(event) {
-    //console.log('running mouseout');
-    //this is the original element the event handler was assigned to
-    //var te = event.toElement;
-    //var e = event.relatedTarget;
-    //var pn = e.parentNode;
-    //console.log (pn.getAttribute('id'));
-    //console.log(this);
-    ////console.log(e.parentNode);
-    ////if (e.parentNode == this || e == this) {
-    //if (pn.getAttribute('id')=='top-menu') {
-    //    //console.log('still on same do nothinbg');
-    //    return;
-    //}
-    //console.log('real mouse out!');
-    // handle mouse event here!
-}
 function fPro () {
     alert('do something for pro click');
 }
@@ -181,7 +148,6 @@ function addAnimation(param, classAnimate) {
 }
 
 function showLeftFrame(frameId) {
-    console.log(frameId);
     var frame = document.getElementById(frameId);
     if (frame.classList.contains('hide-field')) {
 

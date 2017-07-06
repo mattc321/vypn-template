@@ -95,12 +95,6 @@ h5{font-size:1.2em;}
     position: relative;
     z-index: 999;
 }
-/*.top-menu-cont {*/
-    /*height: 60px;*/
-    /*width: 100%;*/
-    /*top: 0;*/
-    /*position: absolute;*/
-/*}*/
 
 /*trying sticky*/
 .top-menu-cont {
@@ -161,10 +155,13 @@ div#pro {
 }
 .col-1 {
     float: left;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 45%;
     vertical-align: middle;
-    margin-top: 15vh;
+}
+.file-preview-block img {
+    max-width: 450px;
+    width: 50%;
 }
 .inner-cont {
     display: inline-block;
@@ -176,7 +173,7 @@ div#pro {
 }
 .drag-n-drop:after {
     content: "";
-    background-image: url(../dndicon.png);
+    background-image: url(../images/dndicon.png);
     opacity: .25;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -790,13 +787,23 @@ ul.usage-menu li:hover {
     .top-menu-cont {
         width: 67.555%;
     }
-    /*.form-wrapper {*/
-        /*max-width: 500px;*/
-        /*margin: 0 auto;*/
-    /*}*/
-    /*form.vypn-form input[type="text"], form.form-wrapper input[type="text"] {*/
-        /*width: 100%;*/
-    /*}*/
+}
+@media (max-width: 870px) {
+    .col-left-75 {
+        width: 100%;
+    }
+    .col-right-35, .right-menu-cont {
+        display: none;
+    }
+    .top-menu-cont {
+        width: 100%;
+    }
+    .col-1 {
+        float:none;
+    }
+    .flex-cont {
+        top:inherit;
+    }
 }
 @media (max-width: 480px) {
     .col-left-75 {
