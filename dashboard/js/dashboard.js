@@ -1,10 +1,15 @@
 window.onload = function(e){
-    document.getElementById('top-menu').addEventListener('mouseout',onMouseOut,true);
+
 //<------- Listeners -------->>
     //top menu Sign In button
     var btnSignIn = document.getElementById('signin');
     if(btnSignIn){
         btnSignIn.addEventListener('click', fSignIn, false);
+    }
+
+    var btnPro = document.getElementById('pro');
+    if(btnPro){
+        btnPro.addEventListener('click', fPro, false);
     }
 
     //copy link
@@ -54,6 +59,7 @@ window.onload = function(e){
 //<------- Menu stuff -------->>
     (function() {
         // Bind Click event to the drop down navigation button
+        document.getElementById('top-menu').addEventListener('mouseout',onMouseOut,true);
         var isMouseDown = false;
         document.querySelector('.nav-button').addEventListener('click', function() {
             this.parentNode.parentNode.classList.toggle('closed');
@@ -79,22 +85,31 @@ window.onload = function(e){
 function onMouseOut(event) {
     //console.log('running mouseout');
     //this is the original element the event handler was assigned to
-    var te = event.toElement;
-    var e = event.relatedTarget;
-    var pn = e.parentNode;
-    alert (pn.getAttribute('id'));
+    //var te = event.toElement;
+    //var e = event.relatedTarget;
+    //var pn = e.parentNode;
+    //console.log (pn.getAttribute('id'));
     //console.log(this);
-    //console.log(e.parentNode);
-    //if (e.parentNode == this || e == this) {
-    if (e.parentNode.hasAttributes('id')) {
-        //console.log('still on same do nothinbg');
-        return;
-    }
+    ////console.log(e.parentNode);
+    ////if (e.parentNode == this || e == this) {
+    //if (pn.getAttribute('id')=='top-menu') {
+    //    //console.log('still on same do nothinbg');
+    //    return;
+    //}
     //console.log('real mouse out!');
     // handle mouse event here!
 }
+function fPro () {
+    alert('do something for pro click');
+}
+function getRightFrameList(){
+    var array = [];
 
+    array.push({value:"user-menu-cont"});
+    array.push({value:"login-cont"});
 
+    return array;
+}
 function getLeftFrameList(){
     var array = [];
 
@@ -129,18 +144,8 @@ function fCopyLink() {
 
 //top menu signin button
 function fSignIn(){
-
-    addAnimation(document.getElementById("login-cont"), 'bounceIn');
-
-        //setTimeout(function() {
-        //    //document.getElementById("first").style.display="none";
-        //    //document.getElementById("second").style.opacity=0;
-        //    //document.getElementById("second").style.display="block";
-        //    addAnimation(document.getElementById("second"), 'bounceIn');
-        //    document.getElementById("second").style.opacity=1;
-        //    document.getElementById("first").style.display="none";
-        //    addAnimation(document.getElementById("first"), 'bounceOutRight');
-        //},400)
+    //addAnimation(document.getElementById("login-cont"), 'bounceIn');
+    rightMenuSelect('login-cont');
 }
 
 //This is a blind add class function. Doesnt care if class exists.
@@ -278,27 +283,12 @@ function hideIt(paramID) {
 //this is primarily used to show the
 //transitions between frames. You can of course
 //just use normal links in the menu as well, without the nav-action class.
-function MenuSelect(paramID) {
+function rightMenuSelect(paramID) {
 
-    //loop through menu items and get all their child link data-ids
-    //the data-id of an element will be the div id you want to show
+    var frameList = getRightFrameList();
 
-    var menu = document.getElementById('top-menu');
-    var ele = document.getElementById(paramID);
-    var array = [];
-    var array_items = 0;
-    var items = menu.getElementsByTagName('li');
-
-    //looping through menu, getting ids, building an array
-    for (var j = 0; j < items.length; j++) {
-        if (items[j].childNodes[0].getAttribute('data-id')) {
-            array.push (items[j].childNodes[0].getAttribute('data-id'));
-        }
-
-    }
-    //now hide all other ids and display the one that was clicked
-    for (var i = 0; i < array.length; i++) {
-        hideIt(array[i]);
+    for (var i = 0; i < frameList.length; i++) {
+        hideIt(frameList[i].value);
     }
     unHide(paramID);
 

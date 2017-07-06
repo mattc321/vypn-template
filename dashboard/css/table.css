@@ -5,9 +5,7 @@
 	margin: 0 auto;
 	padding: 2em 0 3em;
 	width: 90%;
-	max-width: 1000px;
-	overflow: hidden;
-	margin-top: -30vh;
+	margin-top: 50px;
 }
 .component .filler {
 	font-family: "Blokk", Arial, sans-serif;

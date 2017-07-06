@@ -51,6 +51,9 @@ h5{font-size:1.2em;}
     /*overflow: hidden;*/
     overflow-y: auto;
 }
+.height80 {
+    height:80vh;
+}
 .flex-cont {
     text-align: center;
     display: flex;
@@ -172,8 +175,14 @@ div#pro {
     border: 1px solid transparent;
 }
 .drag-n-drop:after {
-    content: url(../dndicon.png);
+    content: "";
+    background-image: url(../dndicon.png);
     opacity: .25;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50%;
+    height: 80%;
 }
 .drag-n-drop {
     border: 4px dotted #eaeaea;
@@ -360,7 +369,9 @@ nav .drop-down li:first-child a {
     text-align: center;
     width: 30px;
 }
-
+div#transfers-table {
+    height: 100%;
+}
 ul.drop-down li {
     background: #e8e8e8;
     border-bottom: 1px solid #fff;
