@@ -56,7 +56,7 @@ window.onload = function(e){
     //    }
     //}
 
-//<------- Menu stuff -------->>
+//<-------Top Menu stuff -------->>
     (function() {
         // Bind Click event to the drop down navigation button
         document.getElementById('top-menu').addEventListener('mouseout',onMouseOut,true);

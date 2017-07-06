@@ -207,7 +207,6 @@ div#pro {
     background: #fff !important;
     border-radius: 3px;
     color: #03a9f4 !important;
-
 }
 .hover {
     cursor: pointer;
@@ -782,21 +781,35 @@ ul.usage-menu li:hover {
 
 /*Media Queries*/
 @media (max-width: 1200px) {
-    .sticky-col-right, .sticky-col-left {
-        width: 100%;
+    .col-left-75 {
+        width: 65.555%;
     }
-    body {
-        overflow-y: scroll;
+    .col-right-35, .right-menu-cont {
+        width: 34.333%;
     }
-    .form-wrapper {
-        max-width: 500px;
-        margin: 0 auto;
+    .top-menu-cont {
+        width: 67.555%;
     }
-    form.vypn-form input[type="text"], form.form-wrapper input[type="text"] {
-        width: 100%;
-    }
+    /*.form-wrapper {*/
+        /*max-width: 500px;*/
+        /*margin: 0 auto;*/
+    /*}*/
+    /*form.vypn-form input[type="text"], form.form-wrapper input[type="text"] {*/
+        /*width: 100%;*/
+    /*}*/
 }
 @media (max-width: 480px) {
+    .col-left-75 {
+        width: 100%;
+    }
+    .top-menu-cont {
+        width: 100%;
+        left:-20px ;
+    }
+    .col-right-35 {
+        width: 34.333%;
+    }
+
     .flex-cont {
         height: 20vh;
     }
